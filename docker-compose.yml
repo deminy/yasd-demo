@@ -4,7 +4,7 @@ services:
   app:
     image: deminy/yasd-demo
     environment:
-      PHP_IDE_CONFIG: "serverName=tnt-server"
+      PHP_IDE_CONFIG: "serverName=demo"
     ports:
       - 80:80
     volumes:
