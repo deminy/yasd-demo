@@ -12,9 +12,10 @@ This repository is to test the Swoole debugger [yasd](https://github.com/swoole/
     * Port: 80
     * Debugger: Xdebug
     * Check checkbox "Use path mapping", and map the root directory of this repository to `/var/www` (the absolute path on the server).
-* Please enable option "Start listening for PHP Debug connections" in Phpstorm, and add some breakpoints in file `rootfilesystem/var/www/server.php`.
+* Please enable option "Start listening for PHP Debug connections" in Phpstorm, and add some breakpoints in file [server.php](https://github.com/deminy/yasd-demo/blob/master/rootfilesystem/var/www/server.php).
 * We use port `9000` on the host for debugging. Please make sure it's not used by any other processes. You can use command `lsof -i :9000` to check which program is using port `9000`.
-* When the container is started, please make sure Docker environment variable `PHP_IDE_CONFIG` is set to `serverName=demo`. `demo` is the server name set in Phpstorm.
+* Use command `docker-compose up` or `docker-compose up -d` to start the container.
+  * In file [docker-compose.yml](https://github.com/deminy/yasd-demo/blob/master/docker-compose.yml), Docker environment variable `PHP_IDE_CONFIG` is set to `serverName=demo` in the container. `demo` is the server name set in Phpstorm.
 * After the container is started, you can use command `php --ri yasd` in the container to check yasd settings.
 * Install the Chrome extension [Xdebug Helper](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc). If you use some other browser, please install an Xdebug extension for it. No need to change any options in the extension.
 * Enable the `debug` option in the Chrome extension `Xdebug Helper`.
