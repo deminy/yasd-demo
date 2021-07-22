@@ -8,4 +8,5 @@ yasd.remote_port=9000
 yasd.remote_host=host.docker.internal
 
 ; Uncomment next one for debugging purpose.
-; yasd.log_level=0
+; It will add debugging information to file "debug.log" under the same directory of the running PHP script.
+yasd.log_level=0

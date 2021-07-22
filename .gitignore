@@ -16,4 +16,4 @@
 /*.txt
 
 # Ignore logs
-/var/www/debug.log
+/rootfilesystem/var/www/debug.log

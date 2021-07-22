@@ -34,6 +34,7 @@ docker build -t deminy/yasd-demo .
 docker exec -ti $(docker ps -qf "name=app") env | grep PHP_IDE_CONFIG
 docker exec -ti $(docker ps -qf "name=app") php --ri yasd
 docker exec -ti $(docker ps -qf "name=app") cat /usr/local/etc/php/conf.d/docker-php-ext-yasd.ini
+docker exec -ti $(docker ps -qf "name=app") tail -f debug.log # Only when option "yasd.log_level" is set to 0.
 
 docker exec -ti $(docker ps -qf "name=app") sh # To get access to a shell
 ```

@@ -22,6 +22,7 @@ $http->on(
 
         ob_start();
         phpinfo();
+        $response->header("Content-Type", "text/plain");
         $response->end(ob_get_clean() . "\n");
     }
 );
