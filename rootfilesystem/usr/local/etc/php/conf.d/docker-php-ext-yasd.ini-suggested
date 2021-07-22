@@ -7,6 +7,6 @@ yasd.remote_port=9000
 ; started. This is not necessary any more for yasd v0.3.8+.
 yasd.remote_host=host.docker.internal
 
-; Uncomment next one for debugging purpose.
-; It will add debugging information to file "debug.log" under the same directory of the running PHP script.
+; This will add debugging information to file "debug.log" under the same directory of the running PHP script.
+; If you don't want to log debugging information, comment out next line please.
 yasd.log_level=0
