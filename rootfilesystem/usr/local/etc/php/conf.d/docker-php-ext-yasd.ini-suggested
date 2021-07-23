@@ -1,5 +1,5 @@
 ; When the Docker container is started, this file will be copied to /usr/local/etc/php/conf.d/docker-php-ext-yasd.ini.
-extension=yasd.so
+zend_extension=yasd.so
 yasd.debug_mode=remote
 yasd.remote_port=9000
 
