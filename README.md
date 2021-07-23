@@ -20,9 +20,9 @@ This demo is to show how to test the Swoole debugger [yasd](https://github.com/s
 * After the container is started, you can use command `php --ri yasd` in the container to check yasd settings.
 * Visit URL `http://127.0.0.1` in your browser to start debugging.
 
-<img src="images/phpstorm-debug.png" width="60%" />
+<img src="images/phpstorm-debug.png" width="85%" />
 
-<img src="images/phpstorm-server.png.png" width="60%" />
+<img src="images/phpstorm-server.png" width="85%" />
 
 # Commands for Local Development
 
