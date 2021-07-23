@@ -6,7 +6,7 @@ RUN set -ex \
     && apk add --no-cache --virtual .build-deps $PHPIZE_DEPS \
     && docker-php-source extract \
     && mkdir /usr/src/php/ext/yasd \
-    && curl -sfL https://github.com/swoole/yasd/archive/refs/tags/v0.3.8.tar.gz -o yasd.tar.gz \
+    && curl -sfL https://github.com/swoole/yasd/archive/refs/tags/v0.3.9.tar.gz -o yasd.tar.gz \
     && tar xfz yasd.tar.gz --strip-components=1 -C /usr/src/php/ext/yasd \
     && docker-php-ext-configure yasd \
     && docker-php-ext-install -j$(nproc) yasd \
@@ -19,4 +19,4 @@ COPY ./rootfilesystem/ /
 
 EXPOSE 80
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["php", "-e", "/var/www/server.php"]

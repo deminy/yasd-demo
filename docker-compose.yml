@@ -8,6 +8,5 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./rootfilesystem/usr/local/etc/php/conf.d/docker-php-ext-yasd.ini-suggested:/usr/local/etc/php/conf.d/docker-php-ext-yasd.ini-suggested
+      - ./rootfilesystem/usr/local/etc/php/conf.d/docker-php-ext-yasd.ini:/usr/local/etc/php/conf.d/docker-php-ext-yasd.ini
       - ./rootfilesystem/var/www:/var/www
-      - ./rootfilesystem/entrypoint.sh:/entrypoint.sh
